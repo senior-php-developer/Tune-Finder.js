@@ -1,0 +1,159 @@
+.sc-player{
+  height: 135px;
+}
+
+.sc-player ol, .sc-player li{
+  margin: 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+/* Artworks */
+
+.sc-player .sc-artwork-list{
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  right: 7px;
+  top: 9px;
+  font-size: 0;
+}
+
+.sc-player .sc-artwork-list li{
+  list-style-type: none;
+  display: none;
+}
+
+.sc-player .sc-artwork-list li.active{
+  list-style-type: none;
+  display: block;
+  width: 70px;
+  height: 70px;
+  
+}
+
+.sc-player .sc-artwork-list li img, .sc-player .sc-artwork-list li div{
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* controls */
+
+.sc-player .sc-controls{
+  position: absolute;
+  width: 30px;
+  height: 96px;
+  top: 92px;
+  left: 5px;
+}
+
+.sc-player .sc-controls a{
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.sc-player .sc-controls a.sc-play, .sc-player .sc-controls a.sc-pause{
+  text-indent: -3000px;
+}
+
+.sc-player .sc-controls a.sc-pause{
+  display: none;
+}
+
+.sc-player.playing .sc-controls a.sc-play{
+  display: none;
+}
+
+.sc-player.playing .sc-controls a.sc-pause{
+  display: block;
+}
+
+/* scrubber */
+
+.sc-scrubber { position: absolute; display: block; left: 45px; bottom: 10px; height: 40px; width: 370px;}
+/*
+.sc-player:hover .sc-scrubber, .sc-player.playing .sc-scrubber {
+  display: block;
+  left: 45px;
+}*/
+
+
+
+.sc-scrubber .sc-time-span{
+  height: 30px;
+  margin: 5px;
+  position: relative;
+}
+
+.sc-scrubber .sc-buffer, .sc-scrubber .sc-played{
+  height: 30px;
+  position: absolute;
+  top: 0;
+}
+
+.sc-scrubber .sc-time-indicators{
+  position: absolute;
+  left: 4px;
+  top: -20px;
+}
+
+/* tracks */
+
+/* Track listings*/
+
+.sc-player ol.sc-trackslist{
+  display: none;
+  visibility: hidden;
+}
+
+.sc-player ol.sc-trackslist li{
+  float: left;
+  width: 95.5%;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  list-style: none;
+  font-size: 12px;
+  font-weight: light;
+}
+
+/* Track info*/
+
+.sc-player .sc-info {position: relative; padding: 5px; height: 42px; z-index: 500; margin-left: 46px;width: 275px; line-height: 14px;}
+
+.sc-info h3{
+  margin-bottom: 4px;
+}
+.sc-info h4{
+	display: none;
+  margin-top: 0px;
+}
+
+.sc-info p{
+  display: none;
+  visibility: hidden;
+}
+
+.sc-info-close, .sc-info-toggle{
+  display: none;
+  visibility: hidden;
+}
+/* utilities */
+
+.sc-player .hidden {
+  display: none;
+}
+
+.sc-player-engine-container{
+  width: 1px;
+  height: 1px;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+}
+
+.sc-player-loading{
+  opacity: 0.3;
+}
